@@ -49,7 +49,7 @@ function sadBingSearch() {
             "offset": "0",
             "mkt": "en-us",
             "safeSearch": "Moderate",
-            "freshness": "Week",
+            "freshness": "Month",
             "sortBy": "Relevance"
         },
         type: "GET",
