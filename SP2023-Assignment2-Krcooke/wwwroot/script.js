@@ -28,7 +28,10 @@ function apiSearch() {
       }
   }).then(function () {
       $('#searchResults').html(results);
-      $('#searchResults').dialog();
+      $('#searchResults').dialog({
+          width: "100%",
+          position: { my: "top", at: "bottom", of: "#Bing" }
+      });
   }).fail(function () {
       alert("error");
   });
@@ -42,7 +45,7 @@ function sadBingSearch() {
         },
         data: {
             "q": $("#query").val() + " Tragic",
-            "count": "10",
+            "count": "1",
             "offset": "0",
             "mkt": "en-us",
             "safeSearch": "Moderate",
@@ -52,13 +55,9 @@ function sadBingSearch() {
         type: "GET",
     }).done(function (data) {
         len = data.value.length;
-        results = '';
         for (i = 0; i < len; i++) {
-            results += "<p><a href='" + data.value[i].url + "'>" + data.value[i].name + "</a>: " + data.value[i].description + "</p>";
+            window.open(data.value[i].url);
         }
-    }).then(function () {
-        $('#searchResults').html(results);
-        $('#searchResults').dialog();
     }).fail(function () {
         alert("error");
     });

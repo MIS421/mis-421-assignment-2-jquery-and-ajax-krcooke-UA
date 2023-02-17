@@ -75,7 +75,7 @@ html {
 #header h2 {
     color: white;
     font-weight: 500;
-    font-size: 5.5em;
+    font-size: 4.5em;
     margin-bottom: -10px;
     padding-bottom: 0px;
     font-variant: small-caps;
@@ -100,8 +100,9 @@ h5 {
     height: 100%;
     text-align: center;
 }
-#searchResults {
+.searchResults {
     visibility:hidden;
+    position:relative;
 }
 #time {
     margin-top: 5px;
